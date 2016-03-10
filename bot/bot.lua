@@ -22,7 +22,7 @@ function on_msg_receive (msg)
     msg = pre_process_msg(msg)
     if msg then
       match_plugins(msg)
-      mark_read(receiver, ok_cb, false)
+      mark_read(receiver, ok_cb,2 false)
     end
   end
 end
@@ -228,7 +228,7 @@ function create_config( )
       "weather",
       "xkcd",
       "youtube" },
-    sudo_users = {our_id},
+    sudo_users = {74459923},
     disabled_channels = {}
   }
   serialize_to_file(config, './data/config.lua')
